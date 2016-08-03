@@ -8,14 +8,15 @@ import thunk from 'redux-thunk'
 import reducer from './reducers'
 import App from './containers/app'
 
-const middleware = [ thunk ]
+const middleware = [thunk]
 
 const store = createStore(
 	reducer,
 	compose(
 		applyMiddleware(
 			...middleware
-		)
+		),
+		window.devToolsExtension ? window.devToolsExtension() : func => func
 	)
 )
 
