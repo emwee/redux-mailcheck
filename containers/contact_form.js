@@ -36,7 +36,8 @@ const mapStateToProps = state => {
 }
 
 ContactForm = reduxForm({
-  form: 'contact'
-}, mapStateToProps)(ContactForm)
+  form: 'contact',
+  fields: ['email'],
+})(ContactForm)
 
 export default ContactForm

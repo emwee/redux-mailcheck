@@ -1,11 +1,15 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import ContactForm from './contact_form'
+import DatepickerContainer from './datepicker'
 
 class App extends Component {
 	render() {
 		return (
-			<ContactForm />
+			<div>
+				{/*<ContactForm />*/}
+				<DatepickerContainer />
+			</div>
 		)
 	}
 }
